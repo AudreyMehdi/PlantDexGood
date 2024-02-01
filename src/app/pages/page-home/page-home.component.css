@@ -5,7 +5,7 @@
 }
 .boubou{
   background-color: rgba(0, 0, 255, 0.081);
-  background-image: url(src/assets/cucul.ico);
+  /* background-image: url(src/assets/cucul.ico); */
   opacity: 0.8;
   background-position: center;
 }
