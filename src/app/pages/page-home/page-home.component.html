@@ -1,0 +1,15 @@
+<div class="d-flex boubou">
+  <app-filter-side-bar
+    [categoriesToDisplay]="categoriesToSend"
+    (categoriesToFilter)="onCategorySelected($event)"
+  ></app-filter-side-bar>
+  <div>
+    <app-seach-bar (val)="onSearchText($event)"></app-seach-bar>
+  <div class="container-plants p-4">
+    <app-card-plant
+      *ngFor="let plantData of plantsToDisplay"
+      [plant]="plantData"
+    ></app-card-plant>
+  </div>
+</div>
+</div>
