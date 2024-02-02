@@ -5,6 +5,7 @@
   ></app-filter-side-bar>
   <div>
     <app-seach-bar (val)="onSearchText($event)"></app-seach-bar>
+    <div><app-sort-bar></app-sort-bar></div>
   <div class="container-plants p-4">
     <app-card-plant
       *ngFor="let plantData of plantsToDisplay"

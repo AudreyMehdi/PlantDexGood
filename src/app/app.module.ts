@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardPlantComponent } from './components/card-plant/card-plant.component';
 import { FilterSideBarComponent } from './components/filter-side-bar/filter-side-bar.component';
 import { SeachBarComponent } from './component/seach-bar/seach-bar.component';
+import { SortBarComponent } from './components/sort-bar/sort-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SeachBarComponent } from './component/seach-bar/seach-bar.component';
     CardPlantComponent,
     FilterSideBarComponent,
     SeachBarComponent,
+    SortBarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
