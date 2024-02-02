@@ -1,4 +1,15 @@
 .bou{
     background-color: rgba(78, 5, 46, 0.795);
     box-shadow: 10px 5px 5px red;
+     /* background-image: url(src/assets/cucul.ico); */
+}
+
+.lala{
+    text-align: center;
+    height: 15rem;
+}
+
+img{
+    max-height: 100%;
+    width: auto;
 }

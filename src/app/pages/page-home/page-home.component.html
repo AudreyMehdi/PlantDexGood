@@ -4,10 +4,10 @@
     (categoriesToFilter)="onCategorySelected($event)"
   ></app-filter-side-bar>
   <div>
-    <app-seach-bar (val)="onSearchText($event)"></app-seach-bar>
+   <div class ="p-4"><app-seach-bar (val)="onSearchText($event)"></app-seach-bar></div>
     <div><app-sort-bar></app-sort-bar></div>
-  <div class="container-plants p-4">
-    <app-card-plant
+  <div class="container-plants">
+    <app-card-plant class="one-plant"
       *ngFor="let plantData of plantsToDisplay"
       [plant]="plantData"
     ></app-card-plant>
