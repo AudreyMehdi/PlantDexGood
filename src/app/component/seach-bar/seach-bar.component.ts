@@ -12,8 +12,9 @@ export class SeachBarComponent implements OnInit {
  
  
   ngOnInit() {}
- methodEnfant(event: any) {
-  this.val.emit(event.target.value);
-  console.log('enfant', event.target.value);
+ methodEnfant(event: Event) {
+  const target = event.target as HTMLInputElement;
+  this.val.emit(target.value);
+  console.log('enfant', target.value);
  }
 }

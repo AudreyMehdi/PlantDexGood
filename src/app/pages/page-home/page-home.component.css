@@ -1,13 +1,12 @@
 .container-plants {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 2rem; */
   justify-content: space-between;
   padding: 1.5rem;
   padding-top: 0;
 }
 .boubou{
-  background-color: rgba(0, 0, 255, 0.081);
+  background-color: rgba(21, 27, 19, 0.192);
   /* background-image: url(src/assets/cucul.ico); */
   opacity: 0.8;
   background-position: center;

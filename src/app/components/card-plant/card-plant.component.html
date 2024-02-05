@@ -2,11 +2,17 @@
   <div class="lala">
   <img [src]="plant.image" class="card-img-top" [alt]="plant.nom" />
 </div>
-  <div class="card-body shasha">
-    <h5 class="card-title text-truncate" [title]="plant.nom">
-      {{ plant.nom }}
-    </h5>
-    <p class="card-text">{{ plant.categorie }}</p>
-    <a href="#" class="btn btn-success">🐕 Je l'ai !</a>
+    <div class="card-body cocote">
+      <h5 class="card-title text-truncate" [title]="plant.nom">
+        {{ plant.nom }}
+      </h5>
+      <p class="card-text">{{ plant.categorie }}</p>
+      <h6 class="card-title text-truncate">Arrosage
+        <app-icon [arrosage]="plant.arrosage"></app-icon>
+      </h6>
+      <h6 class="card-title text-truncate">Exposition
+        <app-icon [exposition]="plant.soleil"></app-icon>
+      </h6>
+      <a href="#" class="btn btn-success ombre">🐕 Je l'ai !</a>
+    </div>
   </div>
-</div>

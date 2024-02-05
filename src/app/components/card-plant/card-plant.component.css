@@ -1,7 +1,5 @@
 .bou{
-    background-color: rgba(78, 5, 46, 0.795);
-    box-shadow: 10px 5px 5px red;
-     /* background-image: url(src/assets/cucul.ico); */
+    box-shadow: 10px 5px 5px rgba(15, 15, 15, 0.438); 
 }
 
 .lala{
@@ -12,4 +10,13 @@
 img{
     max-height: 100%;
     width: auto;
+}
+
+.cocote{
+    background: linear-gradient(blue, pink);
+    color: white;
+}
+
+.ombre{
+box-shadow: 10px 5px 5px rgba(15, 15, 15, 0.438); 
 }

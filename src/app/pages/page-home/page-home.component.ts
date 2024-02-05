@@ -55,24 +55,7 @@ export class PageHomeComponent implements OnInit {
 
   // Méthode pour rechercher par catégories (appelée dans le composant "filter-side-bar")
   onCategorySelected(categories: string[]) {
-  this.selectedCategory = categories;
+  this.selectedCategory = [...categories];
     this.filterPlantsByNameAndCategory();
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-// méthode qui filtre les catérories
-// filterPlantsByCategories(categories: string[]) {
-//   this.plantsToDisplay = this.allPlants.filter((x) =>
-//     categories.includes(x.categorie)
-//   );
-// }

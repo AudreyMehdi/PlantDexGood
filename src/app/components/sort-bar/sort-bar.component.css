@@ -1,8 +1,12 @@
 .bar{
-    box-shadow: 10px 5px 5px red;
+    box-shadow: 10px 5px 5px rgba(15, 15, 15, 0.438);
     margin: 15px;
 }
 .la{
     margin-top: auto;
     margin-bottom: auto;
+    color: rgb(0, 0, 0);
+    background-color: rgba(172, 63, 9, 0.363);
+    opacity: 0.5;
+    box-shadow: 10px 5px 5px rgba(15, 15, 15, 0.438);
 }

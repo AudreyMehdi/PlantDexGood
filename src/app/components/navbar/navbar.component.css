@@ -1,3 +1,5 @@
 .navbar-nav .nav-link.active {
   color: green;
+  background-color: rgba(165, 42, 42, 0.274);
+  
 }

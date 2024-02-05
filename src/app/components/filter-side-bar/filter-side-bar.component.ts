@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Plant } from 'src/app/models/plant';
 
 @Component({
   selector: 'app-filter-side-bar',
@@ -9,6 +10,7 @@ export class FilterSideBarComponent {
   @Input() categoriesToDisplay!: string[];
   checkedCategories: string[] = [];
   @Output() categoriesToFilter = new EventEmitter<string[]>();
+  @Input() plant!:Plant; //////////////////
 
   onCheckedCategories(event: Event) {
     const target = event.target as HTMLInputElement;

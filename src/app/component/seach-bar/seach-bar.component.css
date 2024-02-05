@@ -1,4 +1,4 @@
 .bar{
-    box-shadow: 10px 5px 5px red;
-    width: 100%;
+    box-shadow: 10px 5px 5px rgba(15, 15, 15, 0.438);
+    width: 50%;
 }

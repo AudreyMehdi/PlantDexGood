@@ -1,0 +1,48 @@
+<div *ngIf="exposition === 'beaucoup'">
+    <ng-container *ngFor="let _ of [1, 2, 3]">
+      <i class="bi bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+    </ng-container>
+  </div>
+  <div *ngIf="exposition === 'peu'">
+      <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+      <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+      <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+  </div>
+  <div *ngIf="exposition === 'moyen'">
+    <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+    <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+    <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+  </div>
+  <div *ngIf="arrosage === 2">
+    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+  </div>
+  <div *ngIf="arrosage === 3">
+    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+  </div>
+  <div *ngIf="arrosage === 0">
+    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- <i [ngClass]="{'bi bi-0-square':exposition === 'peu',
+'bi bi-2-circle-fill':exposition ==='moyen',
+'bi bi-brightness-high-fill':exposition ==='beaucoup',
+'bi bi-arrow-down-left-square':arrosage ===2}"
+ style="font-size: 2rem; color: rgb(152, 240, 12);"></i> -->
