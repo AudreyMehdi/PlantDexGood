@@ -13,7 +13,7 @@ img{
 }
 
 .cocote{
-    background: linear-gradient(blue, pink);
+    background: linear-gradient(rgba(0, 0, 255, 0.37), rgba(255, 192, 203, 0.384));
     color: white;
 }
 

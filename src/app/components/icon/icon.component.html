@@ -1,32 +1,32 @@
 <div *ngIf="exposition === 'beaucoup'">
-    <ng-container *ngFor="let _ of [1, 2, 3]">
-      <i class="bi bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-    </ng-container>
+  <app-icon-soleil-plein></app-icon-soleil-plein>
+  <app-icon-soleil-plein></app-icon-soleil-plein>
+  <app-icon-soleil-plein></app-icon-soleil-plein>
   </div>
   <div *ngIf="exposition === 'peu'">
-      <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-      <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-      <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+    <app-icon-soleil-plein></app-icon-soleil-plein>
+    <app-icon-soleil-vide></app-icon-soleil-vide>
+    <app-icon-soleil-vide></app-icon-soleil-vide>
   </div>
   <div *ngIf="exposition === 'moyen'">
-    <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-    <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-    <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
+    <app-icon-soleil-plein></app-icon-soleil-plein>
+    <app-icon-soleil-plein></app-icon-soleil-plein>
+    <app-icon-soleil-vide></app-icon-soleil-vide>
   </div>
   <div *ngIf="arrosage === 2">
-    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-    <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <app-icon-goutte-pleine></app-icon-goutte-pleine>
+    <app-icon-goutte-pleine></app-icon-goutte-pleine>
+    <app-icon-goutte-vide></app-icon-goutte-vide>
   </div>
   <div *ngIf="arrosage === 3">
-    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <app-icon-goutte-pleine></app-icon-goutte-pleine>
+    <app-icon-goutte-pleine></app-icon-goutte-pleine>
+    <app-icon-goutte-pleine></app-icon-goutte-pleine>
   </div>
   <div *ngIf="arrosage === 0">
-    <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-    <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-    <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+    <app-icon-goutte-pleine></app-icon-goutte-pleine>
+    <app-icon-goutte-vide></app-icon-goutte-vide>
+    <app-icon-goutte-vide></app-icon-goutte-vide>
   </div>
   
   

@@ -14,6 +14,9 @@ export class PageHomeComponent implements OnInit {
   saveSearch: string = "";
   selectedCategory: string[] = [];
 
+soleilToSend: string[] = [];
+selectedSoleil: string[] = [];
+
   constructor(private plantsService: PlantsService) {}
 
   ngOnInit(): void {
@@ -23,6 +26,7 @@ export class PageHomeComponent implements OnInit {
       this.allPlants = [...data];
   
       this.categoriesToSend = this.getCategoriesFromPlants(data);
+      this.soleilToSend = this.getSoleilFromPlants(data);
     });
   }
 // Méthode qui récupère le tableau de catégories donné par l'enfant
@@ -33,6 +37,24 @@ export class PageHomeComponent implements OnInit {
 
     return categoryArrayUnique;
   }
+
+
+
+
+
+  // Méthode qui récupère le tableau d'ensoleillement donné par l'enfant
+  getSoleilFromPlants(plants: Plant[]): string[] {
+    const soleilArray = plants.map((x) => x.soleil);
+    const soleilSetUnique = new Set(soleilArray);
+    const soleilArrayUnique = [...soleilSetUnique];
+
+    return soleilArrayUnique;
+  }
+
+
+
+
+
 
   // Filtrer les plantes en fonction de la catégorie sélectionnée
   filterPlantsByNameAndCategory() {
@@ -45,17 +67,48 @@ export class PageHomeComponent implements OnInit {
       plant.nom.toLowerCase().includes(this.saveSearch.toLowerCase())
     );
   }
+
+
+
+
+
+ // Filtrer les plantes en fonction de l'ensoleillement sélectionné
+ filterPlantsBySoleil() {
+  // d'abord filtrer les plantes par soleil sélectionnés
+  const plantsFilteredBySoleil = this.allPlants.filter((plant) =>
+    this.selectedSoleil.length === 0 || this.selectedSoleil.includes(plant.soleil)
+  );
+    // Ensuite filtrer les plantes par nom, suivant la saisie "saveSearch"
+    this.plantsToDisplay = plantsFilteredBySoleil.filter((plant) =>
+      plant.nom.toLowerCase().includes(this.saveSearch.toLowerCase())
+    );
+}
+
   
+
+
+
+
   // méthode pour filtrer par recherche "search", sauvegardé dans "saveSearch" (appelée dans le composant "search-bar")
   //fait appel à la méthode filterPlantsByNameAndCategory qui check aussi si jamais une catégorie est sélectionnée
   onSearchText(search: string) {
     this.saveSearch = search;
     this.filterPlantsByNameAndCategory();
+    this.filterPlantsBySoleil();
   }
+
+
 
   // Méthode pour rechercher par catégories (appelée dans le composant "filter-side-bar")
   onCategorySelected(categories: string[]) {
   this.selectedCategory = [...categories];
     this.filterPlantsByNameAndCategory();
   }
+
+
+// Méthode pour rechercher par soleil
+  onSoleilSelected(soleil: string[]) {
+    this.selectedSoleil = [...soleil];
+    this.filterPlantsBySoleil();
+    }
 }

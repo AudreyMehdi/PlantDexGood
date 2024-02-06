@@ -7,11 +7,22 @@ import { Plant } from 'src/app/models/plant';
   styleUrls: ['./filter-side-bar.component.css'],
 })
 export class FilterSideBarComponent {
+  // Concerne le filtre par catégories
   @Input() categoriesToDisplay!: string[];
   checkedCategories: string[] = [];
   @Output() categoriesToFilter = new EventEmitter<string[]>();
-  @Input() plant!:Plant; //////////////////
 
+  // Concerne le filtre par Ensoleillement
+  @Output() soleilToFilter = new EventEmitter<string[]>();
+  checkedSoleil: string[] = [];
+  @Input() soleilToDisplay!: string[];
+
+ 
+ 
+ 
+ 
+ 
+  ////// Méthode qui filtre par catégorie //////
   onCheckedCategories(event: Event) {
     const target = event.target as HTMLInputElement;
 
@@ -44,5 +55,34 @@ export class FilterSideBarComponent {
     }
 
     this.categoriesToFilter.emit(this.checkedCategories);
+    console.log(this.checkedCategories)
+  }
+
+ 
+ 
+ 
+  ////// Méthode qui filtre par ensoleillement //////
+  onCheckedSoleil(event: Event) {
+    const target = event.target as HTMLInputElement;
+
+    if (target.checked) {
+      if (this.checkedSoleil.length === this.soleilToDisplay.length) {
+        this.checkedSoleil = [];
+      }
+      this.checkedSoleil.push(target.value);
+    } else {
+      this.checkedSoleil = this.checkedSoleil.filter(
+        (soleil) => soleil !== target.value
+      );
+
+      if (this.checkedSoleil.length === 0) {
+        this.checkedSoleil = [...this.soleilToDisplay];
+      }
+    }
+
+    this.soleilToFilter.emit(this.checkedSoleil);
+    console.log(this.soleilToDisplay)
+    console.log(this.checkedSoleil)
+
   }
 }

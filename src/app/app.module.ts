@@ -14,6 +14,10 @@ import { FilterSideBarComponent } from './components/filter-side-bar/filter-side
 import { SeachBarComponent } from './component/seach-bar/seach-bar.component';
 import { SortBarComponent } from './components/sort-bar/sort-bar.component';
 import { IconComponent } from './components/icon/icon.component';
+import { IconGoutteVideComponent } from './components/icon/icon-goutte-vide/icon-goutte-vide.component';
+import { IconGouttePleineComponent } from './components/icon/icon-goutte-pleine/icon-goutte-pleine.component';
+import { IconSoleilVideComponent } from './components/icon/icon-soleil-vide/icon-soleil-vide.component';
+import { IconSoleilPleinComponent } from './components/icon/icon-soleil-plein/icon-soleil-plein.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { IconComponent } from './components/icon/icon.component';
     SeachBarComponent,
     SortBarComponent,
     IconComponent,
+    IconGoutteVideComponent,
+    IconGouttePleineComponent,
+    IconSoleilVideComponent,
+    IconSoleilPleinComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

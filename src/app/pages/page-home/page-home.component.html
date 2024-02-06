@@ -2,6 +2,8 @@
   <app-filter-side-bar
     [categoriesToDisplay]="categoriesToSend"
     (categoriesToFilter)="onCategorySelected($event)"
+    [soleilToDisplay]="soleilToSend"
+    (soleilToFilter)="onSoleilSelected($event)"
   ></app-filter-side-bar>
   <div>
    <div class ="p-4"><app-seach-bar (val)="onSearchText($event)"></app-seach-bar></div>

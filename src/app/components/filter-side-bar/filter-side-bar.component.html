@@ -17,40 +17,40 @@
         {{ category }}
       </label>
        </div>
-    <div>
-      <div><p></p></div>
-      <fieldset>
-        <legend>Exposition</legend>
-      
-        <div>
-          <input class="form-check-input" type="checkbox" id="huey" />
-          <label for="huey">
-            <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-            <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-            <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-          </label>
-        </div>
-      
-        <div>
-          <input class="form-check-input" type="checkbox" id="huey" />
-          <label for="huey">
-            <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-            <i class="bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-            <i class="bi bi-brightness-high" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-          </label>
-        </div>
-      
-        <div>
-          <input class="form-check-input" type="checkbox" id="huey" />
-          <label for="huey">
-            <ng-container *ngFor="let _ of [1, 2, 3]">
-              <i class="bi bi-brightness-high-fill" style="font-size: 2rem; color: rgb(251, 255, 12);"></i>
-            </ng-container>
-          </label>
-        </div>
-      </fieldset>
-    </div>
 
+
+       <p class="fs-5 fw-semibold">Exposition</p>
+       <div class="form-check" *ngFor="let soso of soleilToDisplay">
+         <input
+           class="form-check-input"
+           type="checkbox"
+           value="{{ soso }}"
+           id="{{ soso }}"
+           (change)="onCheckedSoleil($event)"
+         />
+         <div *ngIf="soso === 'peu'">
+          <app-icon-soleil-plein></app-icon-soleil-plein>
+          <app-icon-soleil-vide></app-icon-soleil-vide>
+          <app-icon-soleil-vide></app-icon-soleil-vide>
+        </div>
+         <div *ngIf="soso === 'moyen'">
+          <app-icon-soleil-plein></app-icon-soleil-plein>
+          <app-icon-soleil-plein></app-icon-soleil-plein>
+          <app-icon-soleil-vide></app-icon-soleil-vide>
+        </div>      
+        <div *ngIf="soso === 'beaucoup'">
+          <app-icon-soleil-plein></app-icon-soleil-plein>
+          <app-icon-soleil-plein></app-icon-soleil-plein>
+          <app-icon-soleil-plein></app-icon-soleil-plein>
+          </div>
+          </div>
+
+
+
+
+
+ 
+    
 
          <fieldset>
         <legend>Arrosage</legend>
@@ -58,27 +58,27 @@
         <div>
           <input class="form-check-input" type="checkbox" id="huey" />
           <label for="huey">
-            <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-            <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-            <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+            <app-icon-goutte-pleine></app-icon-goutte-pleine>
+            <app-icon-goutte-vide></app-icon-goutte-vide>
+            <app-icon-goutte-vide></app-icon-goutte-vide>
           </label>
         </div>
       
         <div>
           <input class="form-check-input" type="checkbox" id="huey" />
           <label for="huey">
-            <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-            <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-            <i class="bi bi-droplet" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+            <app-icon-goutte-pleine></app-icon-goutte-pleine>
+            <app-icon-goutte-pleine></app-icon-goutte-pleine>
+            <app-icon-goutte-vide></app-icon-goutte-vide>
           </label>
         </div>
       
         <div>
           <input class="form-check-input" type="checkbox" id="huey" />
           <label for="huey">
-            <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-            <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
-            <i class="bi bi-droplet-fill" style="font-size: 2rem; color: rgb(57, 12, 255);"></i>
+            <app-icon-goutte-pleine></app-icon-goutte-pleine>
+            <app-icon-goutte-pleine></app-icon-goutte-pleine>
+            <app-icon-goutte-pleine></app-icon-goutte-pleine>
           </label>
         </div>
       </fieldset>
