@@ -4,6 +4,8 @@
     (categoriesToFilter)="onCategorySelected($event)"
     [soleilToDisplay]="soleilToSend"
     (soleilToFilter)="onSoleilSelected($event)"
+    [arrosageToDisplay]="arrosageToSend"
+    (arrosageToFilter)="onArrosageSelected($event)"
   ></app-filter-side-bar>
   <div>
    <div class ="p-4"><app-seach-bar (val)="onSearchText($event)"></app-seach-bar></div>

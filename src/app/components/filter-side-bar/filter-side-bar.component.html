@@ -6,82 +6,57 @@
   <div class="px-3">
     <p class="fs-5 fw-semibold">Catégorie</p>
     <div class="form-check" *ngFor="let category of categoriesToDisplay">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value="{{ category }}"
-        id="{{ category }}"
-        (change)="onCheckedCategories($event)"
-      />
+      <input class="form-check-input" type="checkbox" value="{{ category }}" id="{{ category }}"
+        (change)="onCheckedCategories($event)" />
       <label class="form-check-label" for="{{ category }}">
         {{ category }}
       </label>
-       </div>
+    </div>
 
 
-       <p class="fs-5 fw-semibold">Exposition</p>
-       <div class="form-check" *ngFor="let soso of soleilToDisplay">
-         <input
-           class="form-check-input"
-           type="checkbox"
-           value="{{ soso }}"
-           id="{{ soso }}"
-           (change)="onCheckedSoleil($event)"
-         />
-         <div *ngIf="soso === 'peu'">
-          <app-icon-soleil-plein></app-icon-soleil-plein>
-          <app-icon-soleil-vide></app-icon-soleil-vide>
-          <app-icon-soleil-vide></app-icon-soleil-vide>
-        </div>
-         <div *ngIf="soso === 'moyen'">
-          <app-icon-soleil-plein></app-icon-soleil-plein>
-          <app-icon-soleil-plein></app-icon-soleil-plein>
-          <app-icon-soleil-vide></app-icon-soleil-vide>
-        </div>      
-        <div *ngIf="soso === 'beaucoup'">
-          <app-icon-soleil-plein></app-icon-soleil-plein>
-          <app-icon-soleil-plein></app-icon-soleil-plein>
-          <app-icon-soleil-plein></app-icon-soleil-plein>
-          </div>
-          </div>
+    <p class="fs-5 fw-semibold">Exposition</p>
+    <div class="form-check" *ngFor="let soso of soleilToDisplay">
+      <input class="form-check-input" type="checkbox" value="{{ soso }}" id="{{ soso }}"
+        (change)="onCheckedSoleil($event)" />
+      <div *ngIf="soso === 'peu'">
+        <app-icon-soleil-plein></app-icon-soleil-plein>
+        <app-icon-soleil-vide></app-icon-soleil-vide>
+        <app-icon-soleil-vide></app-icon-soleil-vide>
+      </div>
+      <div *ngIf="soso === 'moyen'">
+        <app-icon-soleil-plein></app-icon-soleil-plein>
+        <app-icon-soleil-plein></app-icon-soleil-plein>
+        <app-icon-soleil-vide></app-icon-soleil-vide>
+      </div>
+      <div *ngIf="soso === 'beaucoup'">
+        <app-icon-soleil-plein></app-icon-soleil-plein>
+        <app-icon-soleil-plein></app-icon-soleil-plein>
+        <app-icon-soleil-plein></app-icon-soleil-plein>
+      </div>
+    </div>
 
 
 
-
-
- 
-    
-
-         <fieldset>
-        <legend>Arrosage</legend>
-      
-        <div>
-          <input class="form-check-input" type="checkbox" id="huey" />
-          <label for="huey">
-            <app-icon-goutte-pleine></app-icon-goutte-pleine>
-            <app-icon-goutte-vide></app-icon-goutte-vide>
-            <app-icon-goutte-vide></app-icon-goutte-vide>
-          </label>
-        </div>
-      
-        <div>
-          <input class="form-check-input" type="checkbox" id="huey" />
-          <label for="huey">
-            <app-icon-goutte-pleine></app-icon-goutte-pleine>
-            <app-icon-goutte-pleine></app-icon-goutte-pleine>
-            <app-icon-goutte-vide></app-icon-goutte-vide>
-          </label>
-        </div>
-      
-        <div>
-          <input class="form-check-input" type="checkbox" id="huey" />
-          <label for="huey">
-            <app-icon-goutte-pleine></app-icon-goutte-pleine>
-            <app-icon-goutte-pleine></app-icon-goutte-pleine>
-            <app-icon-goutte-pleine></app-icon-goutte-pleine>
-          </label>
-        </div>
-      </fieldset>
+    <p class="fs-5 fw-semibold">Arrosage</p>
+    <div class="form-check" *ngFor="let aro of arrosageToDisplay">
+      <input class="form-check-input" type="checkbox" value="{{ aro }}" id="{{ aro }}"
+        (change)="onCheckedArrosage($event)" />
+      <div *ngIf="aro === 0">
+        <app-icon-goutte-pleine></app-icon-goutte-pleine>
+        <app-icon-goutte-vide></app-icon-goutte-vide>
+        <app-icon-goutte-vide></app-icon-goutte-vide>
+      </div>
+      <div *ngIf="aro === 2">
+        <app-icon-goutte-pleine></app-icon-goutte-pleine>
+        <app-icon-goutte-pleine></app-icon-goutte-pleine>
+        <app-icon-goutte-vide></app-icon-goutte-vide>
+      </div>
+      <div *ngIf="aro === 3">
+        <app-icon-goutte-pleine></app-icon-goutte-pleine>
+        <app-icon-goutte-pleine></app-icon-goutte-pleine>
+        <app-icon-goutte-pleine></app-icon-goutte-pleine>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -89,4 +64,35 @@
 
 
 
- <!-- <img src="../../../assets/bebe.gif" class="bebe"/> -->
+<!-- <img src="../../../assets/bebe.gif" class="bebe"/> -->
+<!-- 
+ <fieldset>
+  <legend>Arrosage</legend>
+
+  <div>
+    <input class="form-check-input" type="checkbox" id="huey" />
+    <label for="huey">
+      <app-icon-goutte-pleine></app-icon-goutte-pleine>
+      <app-icon-goutte-vide></app-icon-goutte-vide>
+      <app-icon-goutte-vide></app-icon-goutte-vide>
+    </label>
+  </div>
+
+  <div>
+    <input class="form-check-input" type="checkbox" id="huey" />
+    <label for="huey">
+      <app-icon-goutte-pleine></app-icon-goutte-pleine>
+      <app-icon-goutte-pleine></app-icon-goutte-pleine>
+      <app-icon-goutte-vide></app-icon-goutte-vide>
+    </label>
+  </div>
+
+  <div>
+    <input class="form-check-input" type="checkbox" id="huey" />
+    <label for="huey">
+      <app-icon-goutte-pleine></app-icon-goutte-pleine>
+      <app-icon-goutte-pleine></app-icon-goutte-pleine>
+      <app-icon-goutte-pleine></app-icon-goutte-pleine>
+    </label>
+  </div>
+</fieldset> -->
