@@ -20,3 +20,8 @@ img{
 .ombre{
 box-shadow: 10px 5px 5px rgba(15, 15, 15, 0.438); 
 }
+
+.jardin-info h6 {
+    display: inline-block; /* Afficher les éléments en ligne */
+    margin-right: 20px; /* Marge à droite pour l'espace entre les éléments */
+}

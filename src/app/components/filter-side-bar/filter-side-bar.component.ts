@@ -77,7 +77,7 @@ export class FilterSideBarComponent {
       }
     }
     this.soleilToFilter.emit(this.checkedSoleil);
-    console.log(this.soleilToDisplay);
+    console.log("--aaa--",this.soleilToDisplay);
     console.log(this.checkedSoleil);
     console.log('----------', event);
   }
