@@ -6,6 +6,11 @@
     <h5 class="card-title text-truncate" [title]="plant.nom">
       {{ plant.nom }}
     </h5>
+    <div>
+      <app-icon [iconName]="'heart-fill'" [iconColor]="'red'" [iconTaille]="10"></app-icon>
+      <app-icon [iconName]="'sun'" [iconColor]="'yellow'"[iconTaille]="3"></app-icon>
+      <app-icon [iconName]="'droplet-fill'" [iconColor]="'blue'"[iconTaille]="3"></app-icon>
+    </div>
     <p class="card-text">{{ plant.categorie }}</p>
     <a href="#" class="btn btn-success">🐕 Je l'ai !</a>
   </div>
