@@ -18,6 +18,9 @@ import { IconGoutteVideComponent } from './components/icon/icon-goutte-vide/icon
 import { IconGouttePleineComponent } from './components/icon/icon-goutte-pleine/icon-goutte-pleine.component';
 import { IconSoleilVideComponent } from './components/icon/icon-soleil-vide/icon-soleil-vide.component';
 import { IconSoleilPleinComponent } from './components/icon/icon-soleil-plein/icon-soleil-plein.component';
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { PageNewPlanteComponent } from './pages/page-new-plante/page-new-plante.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,8 +39,10 @@ import { IconSoleilPleinComponent } from './components/icon/icon-soleil-plein/ic
     IconGouttePleineComponent,
     IconSoleilVideComponent,
     IconSoleilPleinComponent,
+    FormulaireComponent,
+    PageNewPlanteComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

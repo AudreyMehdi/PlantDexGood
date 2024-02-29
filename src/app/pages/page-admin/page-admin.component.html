@@ -1,1 +1,20 @@
-<p>page-admin works!</p>
+<h1 class="titi">Page Admin plantdex</h1>
+
+<table class = "table bou">
+ <thead>
+   <th>Nom</th>
+   <th>Image</th>
+   <th>Catégorie</th>
+   <th>Besoin d'ensolleilement</th>
+   <th>Besoin d'arrosage</th>
+ </thead>
+      <tbody>
+        <tr *ngFor="let plant of plantsToDisplay">
+          <td>{{ plant.nom }}</td>
+          <td><img [src]="plant.image" alt="Image {{ plant.nom }}"style="max-width: 100px; max-height: 100px"></td>
+          <td>{{ plant.categorie }}</td>
+          <td>{{ plant.soleil }}</td>
+          <td>{{ plant.arrosage }}</td>
+        </tr>
+      </tbody>
+</table>
