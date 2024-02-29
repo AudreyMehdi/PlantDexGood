@@ -1,14 +1,6 @@
 {
   "plants": [
     {
-      "id": 952438,
-      "nom": "Anthurium, pot D12cm",
-      "soleil": "moyen",
-      "arrosage": 2,
-      "categorie": "plantes fleuries",
-      "image": "https://images.truffaut.com/media/catalog/product/cdn:///Articles/jpg/0952000/952438_003.jpg"
-    },
-    {
       "id": 77390,
       "nom": "Anthurium: Pot 17cm petit modèle - Coloris variables",
       "soleil": "moyen",

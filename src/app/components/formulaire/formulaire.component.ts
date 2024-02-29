@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Plant } from 'src/app/models/plant';
 
 @Component({
   selector: 'app-formulaire',
@@ -8,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class FormulaireComponent  implements OnInit{
   formPlant! : FormGroup;
+  @Output() submitFormPlant = new EventEmitter<Plant>();
 
 
   ngOnInit(): void {
@@ -28,6 +30,7 @@ initForm(){
 
 onSubmitForm(){
   console.log(this.formPlant.value);
+  this.submitFormPlant.emit(this.formPlant.value);
 }
 
 }

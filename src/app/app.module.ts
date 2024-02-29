@@ -40,7 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     IconSoleilVideComponent,
     IconSoleilPleinComponent,
     FormulaireComponent,
-    PageNewPlanteComponent,
+    PageNewPlanteComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],

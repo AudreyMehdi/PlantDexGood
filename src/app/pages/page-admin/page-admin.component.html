@@ -1,5 +1,6 @@
 <h1 class="titi">Page Admin plantdex</h1>
 
+<button class="btn btn-success pull-right" routerLink="/admin/new-plant" > Add Plante</button>
 <table class = "table bou">
  <thead>
    <th>Nom</th>
@@ -7,6 +8,7 @@
    <th>Catégorie</th>
    <th>Besoin d'ensolleilement</th>
    <th>Besoin d'arrosage</th>
+   <th>Delete</th>
  </thead>
       <tbody>
         <tr *ngFor="let plant of plantsToDisplay">
@@ -15,6 +17,7 @@
           <td>{{ plant.categorie }}</td>
           <td>{{ plant.soleil }}</td>
           <td>{{ plant.arrosage }}</td>
+          <td> <button type="reset" (click)="deletePlantClick(plant.id)" ></button></td>
         </tr>
       </tbody>
 </table>
