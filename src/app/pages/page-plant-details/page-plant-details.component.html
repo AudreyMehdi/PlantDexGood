@@ -1,0 +1,10 @@
+<h1>Page détails</h1>
+
+<div *ngIf="plant">
+    <h3>Nom :{{ plant.nom }}</h3>
+    <h4>Id: {{ plant.id }}</h4>
+    <p>Catégorie: {{ plant.categorie }}</p>
+    <p><app-icon-soleil-plein></app-icon-soleil-plein>Soleil: {{ plant.soleil }}</p>
+    <p><app-icon-goutte-pleine></app-icon-goutte-pleine>Arrosage: {{ plant.arrosage }}</p>
+    <img [src]="plant.image" class="card-img-top" [alt]="plant.nom" style="max-width: 500px; max-height: 500px"/>
+  </div>

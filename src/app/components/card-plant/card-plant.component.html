@@ -1,6 +1,6 @@
 <div class="card bou">
   <div class="lala">
-  <img [src]="plant.image" class="card-img-top" [alt]="plant.nom" />
+  <img [src]="plant.image" class="card-img-top" [alt]="plant.nom"  [routerLink]="['/plant/details', plant.id]"/>
 </div>
     <div class="card-body cocote jardin-info">
       <h5 class="card-title text-truncate" [title]="plant.nom">

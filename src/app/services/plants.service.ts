@@ -20,4 +20,8 @@ export class PlantsService {
   deletePlant(planteToDeleteId: number){
    return this.http.delete(`http://localhost:3000/plants/${planteToDeleteId}`);
    }
+
+   getPlantById(plantId: number): Observable<Plant>{
+    return this.http.get<Plant>(`http://localhost:3000/plants/${plantId}`);
+   }
 }

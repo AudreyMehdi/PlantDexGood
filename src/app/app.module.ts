@@ -21,6 +21,7 @@ import { IconSoleilPleinComponent } from './components/icon/icon-soleil-plein/ic
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { PageNewPlanteComponent } from './pages/page-new-plante/page-new-plante.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PagePlantDetailsComponent } from './pages/page-plant-details/page-plant-details.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     IconSoleilVideComponent,
     IconSoleilPleinComponent,
     FormulaireComponent,
-    PageNewPlanteComponent
+    PageNewPlanteComponent,
+    PagePlantDetailsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
