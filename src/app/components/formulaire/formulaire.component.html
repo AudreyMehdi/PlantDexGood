@@ -6,23 +6,58 @@
         formPlant.controls['nom'].invalid && formPlant.controls['nom'].touched
       }" aria-labelledby="invalid-feedback-input-name" />
         <div class="invalid-feedback" id="invalid-feedback-input-name">
-            Ce champ est requis></div>
+            Ce champ est requis</div>
 
     </div>
 
     <div class="mb-3">
         <label for="input-plant-soleil" class="form-label">Soleil</label>
-        <input type="text" formControlName="soleil" id="input-plant-soleil" class="form-control" />
+        <select formControlName="soleil" id="input-plant-soleil" class="form-control" [ngClass]="{
+            'is-invalid': 
+            formPlant.controls['soleil'].invalid && formPlant.controls['soleil'].touched
+        }" aria-labelledby="invalid-feedback-input-soleil">
+            <option value="">Choisir...</option>
+            <option value="peu">Peu</option>
+            <option value="moyen">Moyen</option>
+            <option value="beaucoup">Beaucoup</option>
+        </select>
+        <div class="invalid-feedback" id="invalid-feedback-input-soleil">
+            Ce champ est requis
+        </div>
     </div>
 
     <div class="mb-3">
         <label for="input-plant-arrosage" class="form-label">Arrosage</label>
-        <input type="number" formControlName="arrosage" id="input-plant-arrosage" class="form-control" />
+        <select formControlName="arrosage" id="input-plant-arrosage" class="form-control"
+                [ngClass]="{'is-invalid': formPlant.controls['arrosage'].invalid && formPlant.controls['arrosage'].touched}"
+                aria-labelledby="invalid-feedback-input-arrosage">
+            <option [ngValue]="null" disabled hidden>Choisir...</option>
+            <option [ngValue]="0">0</option>
+            <option [ngValue]="2">2</option>
+            <option [ngValue]="3">3</option>
+        </select>
+        <div *ngIf="formPlant.controls['arrosage'].invalid && formPlant.controls['arrosage'].touched" class="invalid-feedback" id="invalid-feedback-input-arrosage">
+            Ce champ est requis
+        </div>
     </div>
-
+    
     <div class="mb-3">
         <label for="input-plant-categorie" class="form-label">Categorie</label>
-        <input type="text" formControlName="categorie" id="input-plant-categorie" class="form-control" />
+        <select formControlName="categorie" id="input-plant-categorie" class="form-control" [ngClass]="{
+            'is-invalid': 
+            formPlant.controls['categorie'].invalid && formPlant.controls['categorie'].touched
+        }" aria-labelledby="invalid-feedback-input-categorie">
+            <option value="">Choisir...</option>
+            <option value="plantes fleuries">plantes fleuries</option>
+            <option value="orchidés">orchidés</option>
+            <option value="cactus et plantes grasses">cactus et plantes grasses</option>
+            <option value="bonsaïs">bonsaïs</option>
+            <option value="palmiers d'intérieur">palmiers d'intérieur</option>
+            <option value="plantes vertes">plantes vertes</option>
+        </select>
+        <div class="invalid-feedback" id="invalid-feedback-input-categorie">
+            Ce champ est requis
+        </div>
     </div>
 
     <div class="mb-3">
@@ -30,5 +65,5 @@
         <input type="text" formControlName="image" id="input-plant-image" class="form-control" />
     </div>
 
-    <button class="btn btn-succes" [disabled]="formPlant.invalid" type="submit">Créer la plante</button>
+    <button class="btn btn-success" [disabled]="formPlant.invalid" type="submit">Modifier/Créer la plante</button>
 </form>

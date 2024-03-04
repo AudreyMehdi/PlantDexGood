@@ -1,14 +1,15 @@
 <h1 class="titi">Page Admin plantdex</h1>
+<div ><button class="btn pull-right vivi" routerLink="/admin/new-plant" >Ajouter une plante  <i class="bi bi-flower1"></i></button></div>
 
-<button class="btn btn-success pull-right" routerLink="/admin/new-plant" > Add Plante</button>
-<table class = "table bou">
+<table class = "table bou table-danger">
  <thead>
    <th>Nom</th>
    <th>Image</th>
    <th>Catégorie</th>
    <th>Besoin d'ensolleilement</th>
    <th>Besoin d'arrosage</th>
-   <th>Delete</th>
+   <th>Modifier</th>
+   <th>Supprimer</th>
  </thead>
       <tbody>
         <tr *ngFor="let plant of plantsToDisplay">
@@ -17,7 +18,8 @@
           <td>{{ plant.categorie }}</td>
           <td>{{ plant.soleil }}</td>
           <td>{{ plant.arrosage }}</td>
-          <td> <button type="reset" (click)="deletePlantClick(plant.id)" ></button></td>
+          <td> <button type ="submit" [routerLink]="['/admin/plant/edit', plant.id]" >Modifier <i class="bi bi-tencent-qq text-primary"></i></button></td>
+          <td> <button type="reset" (click)="deletePlantClick(plant.id)" >Supprimer <i class="bi bi-cone-striped text-danger"></i></button></td>
         </tr>
       </tbody>
 </table>

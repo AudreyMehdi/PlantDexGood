@@ -9,8 +9,8 @@ import { Plant } from 'src/app/models/plant';
   styleUrls: ['./page-plant-details.component.css']
 })
 export class PagePlantDetailsComponent implements OnInit {
-plant: Plant | undefined;
- 
+plant!: Plant
+
  
 
 
@@ -27,6 +27,8 @@ plant: Plant | undefined;
     this.plantsService.getPlantById(plantIdFromRoute).subscribe((data) => {
       console.log('_________',data);
       this.plant = data;
+      // next: (response) => {console.log(response) this.plant = response}, si notre requete nous renvoie un success
+      // error: () => {} si notre requete nous renvoie une erreur
     });
   }
 }

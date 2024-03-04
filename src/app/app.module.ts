@@ -22,6 +22,7 @@ import { FormulaireComponent } from './components/formulaire/formulaire.componen
 import { PageNewPlanteComponent } from './pages/page-new-plante/page-new-plante.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagePlantDetailsComponent } from './pages/page-plant-details/page-plant-details.component';
+import { PageEditPlantComponent } from './pages/page-edit-plant/page-edit-plant.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PagePlantDetailsComponent } from './pages/page-plant-details/page-plant
     IconSoleilPleinComponent,
     FormulaireComponent,
     PageNewPlanteComponent,
-    PagePlantDetailsComponent
+    PagePlantDetailsComponent,
+    PageEditPlantComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],

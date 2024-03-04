@@ -24,4 +24,10 @@ export class PlantsService {
    getPlantById(plantId: number): Observable<Plant>{
     return this.http.get<Plant>(`http://localhost:3000/plants/${plantId}`);
    }
+
+   updatePlant(plantId: number, plantModif: Plant): Observable<Plant>{
+    return this.http.put<Plant>(`http://localhost:3000/plants/${plantId}`, plantModif);
+    
+   }
+
 }
