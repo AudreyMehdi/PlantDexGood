@@ -23,6 +23,7 @@ import { PageNewPlanteComponent } from './pages/page-new-plante/page-new-plante.
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagePlantDetailsComponent } from './pages/page-plant-details/page-plant-details.component';
 import { PageEditPlantComponent } from './pages/page-edit-plant/page-edit-plant.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { PageEditPlantComponent } from './pages/page-edit-plant/page-edit-plant.
     FormulaireComponent,
     PageNewPlanteComponent,
     PagePlantDetailsComponent,
-    PageEditPlantComponent
+    PageEditPlantComponent,
+    CartComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],

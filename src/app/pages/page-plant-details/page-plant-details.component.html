@@ -1,10 +1,22 @@
 <h1>Page détails</h1>
 
-<div *ngIf="plant">
-    <h3>Nom :{{ plant.nom }}</h3>
-    <h4>Id: {{ plant.id }}</h4>
-    <p>Catégorie: {{ plant.categorie }}</p>
-    <p><app-icon-soleil-plein></app-icon-soleil-plein>Soleil: {{ plant.soleil }}</p>
-    <p><app-icon-goutte-pleine></app-icon-goutte-pleine>Arrosage: {{ plant.arrosage }}</p>
-    <img [src]="plant.image" class="card-img-top" [alt]="plant.nom" style="max-width: 500px; max-height: 500px"/>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngIf="plant">
+        <h3>Nom :{{ plant.nom }}</h3>
+        <p>Catégorie: {{ plant.categorie }}</p>
+        <p><app-icon-soleil-plein></app-icon-soleil-plein>Soleil: {{ plant.soleil }}</p>
+        <p><app-icon-goutte-pleine></app-icon-goutte-pleine>Arrosage: {{ plant.arrosage }}</p>
+        <img [src]="plant.image" class="card-img-top" [alt]="plant.nom" style="max-width: 500px; max-height: 500px"/>
+      </div>
+    </div>
+    <div class="col">
+      <div class="div-image-parallax"> 
+        <div class="image-parallax"></div>
+      </div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cum eum doloribus ipsam totam nisi mollitia molestiae. Sapiente rerum, fugiat voluptate harum nulla voluptates quaerat, a laboriosam ratione, impedit eligendi!
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis neque beatae praesentium saepe labore natus aut officia voluptatibus distinctio veniam, sint voluptates, iure delectus repellendus, doloremque explicabo autem aliquid? Sunt.
+      <button type="button" (click)="addToCart(plant)">Buy</button>
+    </div>
   </div>

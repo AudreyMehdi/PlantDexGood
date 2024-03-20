@@ -3,7 +3,7 @@
     {
       "nom": "Anthurium: Pot 17cm petit modèle - Coloris variables",
       "image": "https://images.truffaut.com/media/catalog/product/cdn:///Articles/jpg/0077000/77390_010.jpg",
-      "categorie": "plantes fleuries",
+      "categorie": "cactus et plantes grasses",
       "soleil": "moyen",
       "arrosage": 2,
       "id": 77390
@@ -1021,8 +1021,32 @@
       "image": "https://img.freepik.com/vecteurs-premium/illustration-bonsai-pot-illustration-vecteur-dessin-anime-isolee-vecteur-premium_476839-4.jpg",
       "categorie": "orchidés",
       "soleil": "moyen",
-      "arrosage": 2,
+      "arrosage": 3,
       "id": 1029002
+    },
+    {
+      "nom": "allo",
+      "image": "https://img.freepik.com/vecteurs-premium/illustration-bonsai-pot-illustration-vecteur-dessin-anime-isolee-vecteur-premium_476839-4.jpg",
+      "categorie": "cactus et plantes grasses",
+      "soleil": "moyen",
+      "arrosage": 2,
+      "id": 1029003
+    },
+    {
+      "nom": "planteeeeee",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTST_NEYho6Vf1wSaJkATDcjb6nb_RWlpUG0sxuehvLzA&s",
+      "categorie": "cactus et plantes grasses",
+      "soleil": "moyen",
+      "arrosage": 2,
+      "id": 1029004
+    },
+    {
+      "nom": "allo",
+      "image": "https://img.freepik.com/vecteurs-premium/illustration-bonsai-pot-illustration-vecteur-dessin-anime-isolee-vecteur-premium_476839-4.jpg",
+      "categorie": "orchidés",
+      "soleil": "peu",
+      "arrosage": 0,
+      "id": 1029005
     }
   ]
 }

@@ -1,6 +1,6 @@
 <div class="card bou">
   <div class="lala">
-  <img [src]="plant.image" class="card-img-top" [alt]="plant.nom"  [routerLink]="['/plant/details', plant.id]"/>
+  <img [src]="plant.image" class="card-img-top image-zoom" [alt]="plant.nom"  [routerLink]="['/plant/details', plant.id]"/>
 </div>
     <div class="card-body cocote jardin-info">
       <h5 class="card-title text-truncate" [title]="plant.nom">
@@ -13,6 +13,6 @@
       <h6 class="card-title text-truncate">Exposition
         <app-icon [exposition]="plant.soleil"></app-icon>
       </h6>
-      <a href="#" class="btn btn-success ombre">🌻 Je l'ai ! 🌻 </a>
+      <a href="#" class="btn btn-success ombre" (click)="addToCart(plant)">🌻 Je l'ai ! 🌻 </a>
     </div>
   </div>
