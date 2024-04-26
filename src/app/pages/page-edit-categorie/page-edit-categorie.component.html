@@ -1,0 +1,5 @@
+<h1>Page edit Categorie 🐕</h1>
+
+<div class="center-container" *ngIf="categorie">
+    <app-formulaire-categorie (submitFormCat)="modifCatSubmitted($event)" [categorie1]="categorie"></app-formulaire-categorie>
+  </div> 

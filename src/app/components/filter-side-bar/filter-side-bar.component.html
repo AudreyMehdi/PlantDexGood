@@ -18,17 +18,17 @@
     <div class="form-check" *ngFor="let soso of soleilToDisplay.sort().reverse()">
       <input class="form-check-input" type="checkbox" value="{{ soso }}" id="{{ soso }}"
         (change)="onCheckedSoleil($event)" />
-      <div *ngIf="soso === 'peu'">
+      <div *ngIf="soso === 'PEU'">
         <app-icon-soleil-plein></app-icon-soleil-plein>
         <app-icon-soleil-vide></app-icon-soleil-vide>
         <app-icon-soleil-vide></app-icon-soleil-vide>
       </div>
-      <div *ngIf="soso === 'moyen'">
+      <div *ngIf="soso === 'MOYEN'">
         <app-icon-soleil-plein></app-icon-soleil-plein>
         <app-icon-soleil-plein></app-icon-soleil-plein>
         <app-icon-soleil-vide></app-icon-soleil-vide>
       </div>
-      <div *ngIf="soso === 'beaucoup'">
+      <div *ngIf="soso === 'BEAUCOUP'">
         <app-icon-soleil-plein></app-icon-soleil-plein>
         <app-icon-soleil-plein></app-icon-soleil-plein>
         <app-icon-soleil-plein></app-icon-soleil-plein>

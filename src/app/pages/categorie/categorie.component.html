@@ -1,0 +1,16 @@
+<h1>Categorie</h1>
+
+<div ><button routerLink="/categorie/new-categorie" >Ajouter une catégorie <i class="bi bi-flower1"></i></button></div>
+
+<table class = "table bou table-danger">
+    <thead>
+      <th>Nom</th>   
+    </thead>
+         <tbody>
+           <tr *ngFor="let cat of allCategories">
+             <td>{{ cat.libelle }}</td>
+             <td> <button type ="submit"[routerLink]="['/admin/categorie/edit', cat.id]">Modifier <i class="bi bi-tencent-qq text-primary"></i></button></td>
+             <td> <button type="reset" (click)="deletePlantClick(cat.id)">Supprimer <i class="bi bi-cone-striped text-danger"></i></button></td>
+           </tr>
+         </tbody>
+   </table>

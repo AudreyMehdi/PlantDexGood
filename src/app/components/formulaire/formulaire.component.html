@@ -17,9 +17,9 @@
             formPlant.controls['soleil'].invalid && formPlant.controls['soleil'].touched
         }" aria-labelledby="invalid-feedback-input-soleil">
             <option value="">Choisir...</option>
-            <option value="peu">Peu</option>
-            <option value="moyen">Moyen</option>
-            <option value="beaucoup">Beaucoup</option>
+            <option value="PEU">PEU</option>
+            <option value="MOYEN">MOYEN</option>
+            <option value="BEAUCOUP">BEAUCOUP</option>
         </select>
         <div class="invalid-feedback" id="invalid-feedback-input-soleil">
             Ce champ est requis
@@ -41,24 +41,14 @@
         </div>
     </div>
     
-    <div class="mb-3">
-        <label for="input-plant-categorie" class="form-label">Categorie</label>
-        <select formControlName="categorie" id="input-plant-categorie" class="form-control" [ngClass]="{
-            'is-invalid': 
-            formPlant.controls['categorie'].invalid && formPlant.controls['categorie'].touched
-        }" aria-labelledby="invalid-feedback-input-categorie">
-            <option value="">Choisir...</option>
-            <option value="plantes fleuries">plantes fleuries</option>
-            <option value="orchidés">orchidés</option>
-            <option value="cactus et plantes grasses">cactus et plantes grasses</option>
-            <option value="bonsaïs">bonsaïs</option>
-            <option value="palmiers d'intérieur">palmiers d'intérieur</option>
-            <option value="plantes vertes">plantes vertes</option>
+    <div>
+        <label for="input-plant-categorie" class="form-label">Choisir la catégorie : </label>
+    
+        <select formControlName="categorie" id="input-plant-categorie" class="form-control">
+            <option *ngFor="let categorie of allCategories" [value]="categorie.libelle">{{ categorie.libelle }}</option>
         </select>
-        <div class="invalid-feedback" id="invalid-feedback-input-categorie">
-            Ce champ est requis
-        </div>
     </div>
+
 
     <div class="mb-3">
         <label for="input-plant-image" class="form-label">Image</label>

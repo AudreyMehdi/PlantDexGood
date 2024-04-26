@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Categorie } from 'src/app/models/categorie';
 import { Plant } from 'src/app/models/plant';
+import { CategorieServiceService } from 'src/app/services/categorie.service.service';
 
 @Component({
   selector: 'app-formulaire',
@@ -11,9 +13,16 @@ export class FormulaireComponent  implements OnInit{
   formPlant! : FormGroup;
   @Output() submitFormPlant = new EventEmitter<Plant>();
   @Input() plante1 : Plant | undefined | null 
+  allCategories: Categorie[] = [];
+
+  constructor(private CategorieService: CategorieServiceService) {}
 
   ngOnInit(): void {
    this.initForm();
+   this.CategorieService.getCategories().subscribe((data) => {
+    console.log("mon tableau de cat : ",data);
+    this.allCategories = [...data];
+});
   }
 
 initForm(){
@@ -22,6 +31,7 @@ initForm(){
     nom: new FormControl(this.plante1?.nom,[Validators.required, Validators.minLength(2)]),
     image: new FormControl(this.plante1?.image,Validators.required),
     categorie: new FormControl(this.plante1?.categorie,Validators.required),
+    // categorieId: new FormControl(this.plante1?.),
     soleil: new FormControl(this.plante1?.soleil,Validators.required),
     arrosage: new FormControl(this.plante1?.arrosage,Validators.required),
     id: new FormControl(this.plante1?.id,this.newMethod()),

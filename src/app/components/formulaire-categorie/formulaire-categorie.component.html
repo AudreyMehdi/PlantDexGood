@@ -1,0 +1,8 @@
+<form class="w-100" [formGroup]="formCategorie" (ngSubmit)="onSubmitForm()">
+    <div class="mb-3">
+        <label for="input-categorie-libelle" class="form-label">Libelle</label>
+        <input type="text" formControlName="libelle" id="input-libelle" class="form-control"   
+      />
+       </div>
+    <button class="btn btn-success" [disabled]="formCategorie.invalid" type="submit">Créer la categorie</button>
+</form>
