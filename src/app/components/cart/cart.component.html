@@ -1,4 +1,4 @@
-<h3>Cart</h3>
+<h3>Panier</h3>
 
 <table class="table">
     <thead>
@@ -9,12 +9,14 @@
         <th>Besoin d'arrosage</th>
     </thead>
     <tbody>
-        <tr *ngFor="let plant of items">
-            <td>{{ plant.nom }}</td>
-            <td><img [src]="plant.image" alt="Image {{ plant.nom }}" style="max-width: 100px; max-height: 100px"></td>
-            <td>{{ plant.categorie }}</td>
-            <td>{{ plant.soleil }}</td>
-            <td>{{ plant.arrosage }}</td>
+        <tr *ngFor="let plant of items, let i = index">
+            <td class="yellow-background">{{ plant.nom }}</td>
+            <td class="yellow-background"><img [src]="plant.image" alt="Image {{ plant.nom }}" style="max-width: 100px; max-height: 100px"></td>
+            <td class="yellow-background">{{ plant.categorie }}</td>
+            <td class="yellow-background">{{ plant.soleil }}</td>
+            <td class="yellow-background">{{ plant.arrosage }}</td>
+            <button class="round-button" (click)="deleteOneItem(i)">Supprimer de mon panier</button>
         </tr>
     </tbody>
+    <button class="round-button"  (click)="removePlante()">Suppri mémé</button>
 </table>

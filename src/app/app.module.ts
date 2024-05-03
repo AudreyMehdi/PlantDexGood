@@ -20,7 +20,7 @@ import { IconSoleilVideComponent } from './components/icon/icon-soleil-vide/icon
 import { IconSoleilPleinComponent } from './components/icon/icon-soleil-plein/icon-soleil-plein.component';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { PageNewPlanteComponent } from './pages/page-new-plante/page-new-plante.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagePlantDetailsComponent } from './pages/page-plant-details/page-plant-details.component';
 import { PageEditPlantComponent } from './pages/page-edit-plant/page-edit-plant.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -28,6 +28,7 @@ import { CategorieComponent } from './pages/categorie/categorie.component';
 import { PageNewCategorieComponent } from './pages/page-new-categorie/page-new-categorie.component';
 import { FormulaireCategorieComponent } from './components/formulaire-categorie/formulaire-categorie.component';
 import { PageEditCategorieComponent } from './pages/page-edit-categorie/page-edit-categorie.component';
+import { PageLoginComponent } from './pages/page-login/page-login.component';
 
 @NgModule({
   declarations: [
@@ -54,9 +55,10 @@ import { PageEditCategorieComponent } from './pages/page-edit-categorie/page-edi
     CategorieComponent,
     PageNewCategorieComponent,
     FormulaireCategorieComponent,
-    PageEditCategorieComponent
+    PageEditCategorieComponent,
+    PageLoginComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

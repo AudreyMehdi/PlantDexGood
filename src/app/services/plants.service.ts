@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Plant } from '../models/plant';
 import { Observable } from 'rxjs';
@@ -10,7 +10,8 @@ export class PlantsService {
   constructor(private http: HttpClient) {}
 
   getPlants(): Observable<Plant[]> {
-    return this.http.get<Plant[]>('http://localhost:8080/plante');
+  
+    return this.http.get<any>('http://localhost:8080/plante');
   }
 
   createPlant(plantToCreate: Plant): Observable<Plant> {

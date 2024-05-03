@@ -11,26 +11,35 @@ import { CartComponent } from './components/cart/cart.component';
 import { CategorieComponent } from './pages/categorie/categorie.component';
 import { PageNewCategorieComponent } from './pages/page-new-categorie/page-new-categorie.component';
 import { PageEditCategorieComponent } from './pages/page-edit-categorie/page-edit-categorie.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorTokenInterceptor } from './interceptor-token.interceptor';
+import { AdminGuard } from './gards/admin.guard';
+import { PageLoginComponent } from './pages/page-login/page-login.component';
 
 const routes: Routes = [
   //Set route for url : http://localhost:4200
   { path: '', component: PageHomeComponent },
+  {path: 'login', component: PageLoginComponent},
   //Set route for url : http://localhost:4200/my-plants
   { path: 'my-plants', component: PageMyPlantsComponent },
   //Set route for url : http://localhost:4200/admin -> PageAdminComponent
-  { path: 'admin', component: PageAdminComponent },
-  {path: 'admin/new-plant', component: PageNewPlanteComponent},
+  { path: 'admin', canActivate : [AdminGuard], component: PageAdminComponent },
+  {path: 'admin/new-plant', canActivate : [AdminGuard], component: PageNewPlanteComponent},
   {path: 'plant/details/:plantId', component: PagePlantDetailsComponent},
-  {path: 'admin/plant/edit/:plantId', component: PageEditPlantComponent},
-  {path: 'admin/categorie/edit/:categorieId', component: PageEditCategorieComponent},
-  {path: 'categorie', component: CategorieComponent},
-  {path: 'categorie/new-categorie', component: PageNewCategorieComponent},
+  {path: 'admin/plant/edit/:plantId', canActivate : [AdminGuard], component: PageEditPlantComponent},
+  {path: 'admin/categorie/edit/:categorieId', canActivate : [AdminGuard], component: PageEditCategorieComponent},
+  {path: 'categorie', canActivate : [AdminGuard],  component: CategorieComponent},
+  {path: 'categorie/new-categorie', canActivate : [AdminGuard], component: PageNewCategorieComponent},
   {path: 'cart', component: CartComponent},
+ 
   { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorTokenInterceptor, multi: true }
+  ],
 })
 export class AppRoutingModule {}

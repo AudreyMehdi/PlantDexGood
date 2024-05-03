@@ -10,13 +10,10 @@ import { CartService } from 'src/app/cart.service';
 export class CardPlantComponent {
   @Input() plant!: Plant;
 
-  
-  
   constructor(private cartService : CartService){}
 
-  addToCart(plant: Plant) {
+  ajout(plant: Plant){
     this.cartService.addToCart(plant);
-    window.alert('success !!');
-
+    console.log("ajout",plant)
   }
 }

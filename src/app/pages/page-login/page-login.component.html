@@ -1,0 +1,38 @@
+<div class="cadre text-white"> 
+    <h1>Admin log toi</h1>
+  
+    <fieldset>
+        <legend>Enter your credentials</legend>
+  
+        <div class="field">
+            <label for="input-username">Username : </label>
+            <input type="text" [(ngModel)]="username" id="input-username" />
+        </div>
+        <div class="field">
+            <label for="input-password">Password : </label>
+            <input type="password" [(ngModel)]="password" id="input-password" />
+        </div>
+        <div class="field">
+            <label for="input-clientid">Client id : </label>
+            <input type="text" [(ngModel)]="clientid" id="input-clientid" />
+        </div>
+        <div class="field">
+            <label for="input-clientsercret">Client secret : </label>
+            <input type="text" [(ngModel)]="clientsercret" id="input-clientsercret" />
+        </div>
+        <div class="field">
+            <label for="input-url">Url : </label>
+            <input type="text" [(ngModel)]="url" id="input-url" />
+        </div>
+        <button class="bouton-enorme" (click)="onClickSendRequest()">Comme Johnny</button>
+    </fieldset>
+</div>
+
+<!-- Conteneur pour afficher la réponse -->
+<div class="response-container">
+    <h2>Response</h2>
+    <div class="terminal">
+        <code *ngIf="response">{{ response }}</code>
+    </div>
+</div>
+

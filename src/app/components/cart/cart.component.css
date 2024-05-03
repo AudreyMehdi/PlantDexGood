@@ -1,0 +1,26 @@
+.round-button {
+    display: inline-block;
+    background-color: #ff0000; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    border-radius: 50%; /* Rendre le bouton rond */
+    padding: 10px 20px; /* Ajouter un peu de marge intérieure */
+    cursor: pointer; /* Curseur de la souris en pointeur */
+    text-align: center; /* Centrer le texte */
+}
+
+.round-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+.table {
+    background: linear-gradient(to right, 
+        violet, indigo, blue, green, yellow, orange, red);
+    /* Dégradé linéaire allant de la couleur violet à rouge */
+    
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 0; /* Supprimer les rembourrages par défaut */
+}
+.yellow-background {
+    background-color: #fff9c497; /* Jaune pastel */
+}
