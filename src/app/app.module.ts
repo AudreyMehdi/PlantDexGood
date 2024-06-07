@@ -8,7 +8,7 @@ import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageMyPlantsComponent } from './pages/page-my-plants/page-my-plants.component';
 import { PageAdminComponent } from './pages/page-admin/page-admin.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CardPlantComponent } from './components/card-plant/card-plant.component';
 import { FilterSideBarComponent } from './components/filter-side-bar/filter-side-bar.component';
 import { SeachBarComponent } from './component/seach-bar/seach-bar.component';
@@ -29,6 +29,7 @@ import { PageNewCategorieComponent } from './pages/page-new-categorie/page-new-c
 import { FormulaireCategorieComponent } from './components/formulaire-categorie/formulaire-categorie.component';
 import { PageEditCategorieComponent } from './pages/page-edit-categorie/page-edit-categorie.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
+import { InterceptorTokenInterceptor } from './interceptor-token.interceptor';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { PageLoginComponent } from './pages/page-login/page-login.component';
     PageLoginComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
-  providers: [],
+  providers: [{provide : HTTP_INTERCEPTORS, useClass : InterceptorTokenInterceptor, multi : true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
